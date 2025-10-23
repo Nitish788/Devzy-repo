@@ -6,6 +6,7 @@ const authSeller = async (userId) => {
 
         const client = await clerkClient()
         const user = await client.users.getUser(userId)
+        console.log('editing...')
 
         if (user.publicMetadata.role === 'seller') {
             return true;
